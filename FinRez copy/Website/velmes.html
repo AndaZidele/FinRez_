@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Mans vēlmju saraksts</title>
+  <style>
+    body {
+      background: url('/Users/andazidele/Downloads/FinRez/Photos/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .back-button {
+      background-color: #f1c40f;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .back-button:hover {
+      background-color: #f39c12;
+    }
+
+    .title {
+      text-align: center;
+      background-color: #bfb9b9;
+      color: black;
+      padding: 12px 20px;
+      border-radius: 25px;
+      margin: 20px auto;
+      font-size: 20px;
+      max-width: 300px;
+      font-weight: bold;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .filter select,
+    .filter button {
+      background-color: #bfb9b9;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-weight: bold;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .wishlist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .wishlist-item {
+      display: grid;
+      grid-template-columns: 70px 1.2fr 2fr 2fr auto;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 10px;
+      width: 90%;
+      max-width: 1100px;
+      gap: 10px;
+    }
+
+    .wishlist-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .wishlist-name {
+      background-color: #f1c40f;
+      color: black;
+      padding: 8px 14px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    .wishlist-text {
+      background-color: #bfb9b9;
+      color: black;
+      padding: 8px 14px;
+      border-radius: 25px;
+      font-weight: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .heart {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; flex-direction: column; align-items: flex-start;">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/logo.png" alt="FR Logo">
+    <a href="home.html" class="back-button">⬅ Atpakaļ uz sākumlapu</a>
+  </div>
+</header>
+
+<div class="title">Mans vēlmju saraksts</div>
+
+<div class="filter-bar">
+  <div class="filter">
+    <select id="categoryFilter">
+      <option disabled selected>📂 Kategorija</option>
+      <option>Sports</option>
+      <option>Skaistums</option>
+      <option>SPA un masāža</option>
+      <option>Izklaide</option>
+      <option>Bērni</option>
+      <option>Kursi</option>
+      <option>Auto un Moto</option>
+      <option>Veselība</option>
+      <option>Citi</option>
+    </select>
+  </div>
+
+  <div class="filter">
+    <select id="locationFilter">
+      <option disabled selected>📍 Lokācija</option>
+      <option>Rīga</option>
+      <option>Jelgava</option>
+      <option>Liepāja</option>
+      <option>Valmiera</option>
+    </select>
+  </div>
+
+  <div class="filter">
+    <select id="priceFilter">
+      <option disabled selected>💶 Cenas intervāls</option>
+      <option>0–5 eiro</option>
+      <option>6–15 eiro</option>
+      <option>16–25 eiro</option>
+    </select>
+  </div>
+
+  <div class="filter">
+    <button id="clearFilters">🧹 Notīrīt filtrus</button>
+  </div>
+</div>
+
+<div class="wishlist">
+
+  <div class="wishlist-item">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/swimming.jpg" alt="Peldbaseins">
+    <div class="wishlist-name">Ķīpsalas peldbaseins</div>
+    <div class="wishlist-text">Ķīpsalas iela 5, Kurzemes rajons, Rīga, LV-1048</div>
+    <div class="wishlist-text">Lielais peldbaseins</div>
+    <div class="heart">🤍</div>
+  </div>
+
+  <div class="wishlist-item">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/hairdresser.jpg" alt="Kolonna">
+    <div class="wishlist-name">Kolonna</div>
+    <div class="wishlist-text">Rīga, T/c Spice, Lielirbes iela 29</div>
+    <div class="wishlist-text">Matu griezums un veidošana</div>
+    <div class="heart">🤍</div>
+  </div>
+
+  <div class="wishlist-item">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/ukulele.jpg" alt="Ukulele">
+    <div class="wishlist-name">UKULELE RĪGA</div>
+    <div class="wishlist-text">Avotu iela 40, Rīga</div>
+    <div class="wishlist-text">Privātstunda Ukulele</div>
+    <div class="heart">🤍</div>
+  </div>
+
+  <div class="wishlist-item">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/dentist.png" alt="Zobārstniecība"> 
+    <div class="wishlist-name">We Care Zobārstniecība</div>
+    <div class="wishlist-text">Ernesta Birznieka Upīša 27, Rīga</div>
+    <div class="wishlist-text">Zobu ķirurģijas profesionālā konsultācija</div>
+    <div class="heart">🤍</div>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById('clearFilters').addEventListener('click', () => {
+    const selects = document.querySelectorAll('.filter select');
+    selects.forEach(select => {
+      select.selectedIndex = 0;
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Izklaides pakalpojums – FinRez</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('/Users/andazidele/Downloads/FinRez/Photos/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 40px;
+    }
+
+    .form-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      background: #f1c40f;
+      color: black;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #f1c40f;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f39c12;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #fff;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h1>Pievienot izklaides pakalpojumu</h1>
+
+    <label for="desc">Apraksts</label>
+    <textarea id="desc" rows="4" placeholder="Pakalpojuma apraksts..."></textarea>
+
+    <label for="price">Cena (€)</label>
+    <input type="number" id="price" placeholder="Piemēram, 20">
+
+    <label for="location">Lokācija</label>
+    <input type="text" id="location" placeholder="Piemēram, Rīga">
+
+    <label for="age">Vecuma ierobežojums</label>
+    <input type="text" id="age" placeholder="Piemēram, 12+">
+
+    <button>Pievienot</button>
+    <br>
+    <a href="home.html" class="back-button">⬅ Atpakaļ uz sākumlapu</a>
+  </div>
+
+</body>
+</html>

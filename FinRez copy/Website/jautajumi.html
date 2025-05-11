@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Jautājumi – FinRez</title>
+  <style>
+    body {
+      background: url('/Users/andazidele/Downloads/FinRez/Photos/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .logo {
+      height: 60px;
+      margin: 20px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .icons {
+      display: flex;
+      gap: 15px;
+      padding: 10px 0;
+    }
+
+    .icons img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 70px;
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .menu-dropdown a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .menu-dropdown a:hover {
+      background-color: #f1c40f;
+      color: black;
+    }
+
+    .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      flex-grow: 1;
+      margin-top: 40px;
+    }
+
+    .title {
+      background-color: #bfb9b9;
+      color: black;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .question-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      width: 500px;
+      max-width: 90%;
+    }
+
+    .question-box label {
+      background-color: #bfb9b9;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .question-box input {
+      background-color: #bfb9b9;
+      border: none;
+      border-radius: 25px;
+      padding: 14px 20px;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .contact-title {
+      background-color: #3e2617;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-title:hover {
+      background-color: #5a3824;
+    }
+
+    #thanksMessage {
+      display: none;
+      margin-top: -15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #8aff8a;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0 30px 0;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .social-item img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/logo.png" alt="FR Logo" class="logo">
+
+    <div class="icons">
+      <!-- Menu icon with toggle -->
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/menu-icon.png" alt="Menu" id="menuToggle">
+      
+      <!-- Dropdown menu -->
+      <div class="menu-dropdown" id="menuDropdown">
+        <a href="atsauksmes.html">💬 Atsauksmes</a>
+        <a href="home.html">🏠 Sākumlapa</a>
+        <a href="jautajumi.html">❓ Jautājumi</a>
+        <a href="par_mums.html">🧑‍🤝‍🧑 Par mums</a>
+        <a href="profils.html">👤 Tavs profils</a>
+        <a href="velmes.html">❤️ Vēlmju saraksts</a>
+      </div>
+
+      <!-- Home icon -->
+      <a href="home.html">
+        <img src="/Users/andazidele/Downloads/FinRez/Photos/home-icon.png" alt="Home">
+      </a>
+    </div>
+  </div>
+
+  <div class="centered">
+    <div class="title">Jautājumi</div>
+
+    <div class="question-box">
+      <label for="question">Tavs jautājums:</label>
+      <input type="text" id="question" placeholder="Rakstīt...">
+    </div>
+
+    <div class="contact-title" id="contactBtn">Sazinies ar mums</div>
+    <div id="thanksMessage">✅ Paldies par jautājumu!</div>
+  </div>
+
+  <div class="socials">
+    <div class="social-item">
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/email-icon.png" alt="Email">
+      <span>finrez@gmail.com</span>
+    </div>
+    <div class="social-item">
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/Instagram_icon.png" alt="Instagram">
+      <span>@finrez</span>
+    </div>
+    <div class="social-item">
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/facebook-icon.png" alt="Facebook">
+      <span>@finrez</span>
+    </div>
+  </div>
+
+  <script>
+    // Jautājuma nosūtīšanas poga
+    const contactBtn = document.getElementById('contactBtn');
+    const thanksMessage = document.getElementById('thanksMessage');
+
+    contactBtn.addEventListener('click', () => {
+      thanksMessage.style.display = 'block';
+      setTimeout(() => {
+        thanksMessage.style.display = 'none';
+      }, 3000);
+    });
+
+    // Izvēlnes atvēršana/aizvēršana
+    const menuToggle = document.getElementById('menuToggle');
+    const menuDropdown = document.getElementById('menuDropdown');
+
+    menuToggle.addEventListener('click', () => {
+      menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Aizver izvēlni, ja lietotājs klikšķina ārpus tās
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+        menuDropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

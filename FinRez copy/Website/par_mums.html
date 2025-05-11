@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Par mums – FinRez</title>
+  <style>
+    body {
+      background: url('/Users/andazidele/Downloads/FinRez/Photos/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 100px auto 40px auto;
+      padding: 20px;
+      background-color: rgba(40, 20, 10, 0.9);
+      border-radius: 15px;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 10px auto;
+      height: 60px;
+    }
+
+    .title {
+      background-color: #fff;
+      color: #222;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .about-text {
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .about-text strong {
+      display: block;
+      margin-top: 15px;
+    }
+
+    .icons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .icons img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 70px;
+      background-color: rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .menu-dropdown a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .menu-dropdown a:hover {
+      background-color: #f1c40f;
+      color: black;
+    }
+
+    .title-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="icons">
+    <img src="/Users/andazidele/Downloads/FinRez/Photos/menu-icon.png" alt="Menu" id="menuToggle">
+
+    <!-- Izvēlne -->
+    <div class="menu-dropdown" id="menuDropdown">
+      <a href="atsauksmes.html">💬 Atsauksmes</a>
+      <a href="home.html">🏠 Sākumlapa</a>
+      <a href="jautajumi.html">❓ Jautājumi</a>
+      <a href="par_mums.html">🧑‍🤝‍🧑 Par mums</a>
+      <a href="profils.html">👤 Tavs profils</a>
+      <a href="velmes.html">❤️ Vēlmju saraksts</a>
+    </div>
+
+    <a href="home.html">
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/home-icon.png" alt="Home">
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="title-block">
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/logo.png" alt="FR Logo" class="logo">
+      <div class="title">Par mums</div>
+    </div>
+    <div class="about-text">
+      Mēs esam FinRez – inovāciju komanda, kas veido ērtu un modernu rezervāciju platformu ikvienam.<br><br>
+      Mūsu mērķis ir savienot klientus ar pakalpojumu sniedzējiem vienkāršā, drošā un pārskatāmā vidē.
+      Ar FinRez jūs varat viegli atrast un rezervēt pakalpojumus dažādās jomās – no skaistumkopšanas un ēdināšanas līdz sportam un labsajūtai.<br><br>
+      Mēs ticam, ka rezervācijām jābūt ātrām, saprotamām un pieejamām jebkurā laikā un vietā. Tāpēc mēs esam izstrādājuši platformu, kas padara šo procesu par patīkamu pieredzi gan lietotājiem, gan uzņēmumiem.<br><br>
+      FinRez rūpējas arī par drošību, datu aizsardzību un lietotāju ērtībām, ievērojot augstākos kvalitātes standartus.<br><br>
+      Mēs strādājam, lai padarītu pakalpojumu rezervēšanu vieglāku, ātrāku un pieejamāku visiem.<br><br>
+      <strong>FinRez – Tavs ceļš uz ērtu rezervāciju pasauli!</strong>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menuDropdown = document.getElementById('menuDropdown');
+
+    menuToggle.addEventListener('click', () => {
+      menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+        menuDropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

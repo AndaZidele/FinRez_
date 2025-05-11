@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Pieslēgties - FinRez</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('/Users/andazidele/Downloads/FinRez/Photos/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .top-bar img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 60px); /* samazina augstumu, lai top bar netiktu pārsniegts */
+    }
+
+    .login-box {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .login-box h1 {
+      background: #693f29;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .login-box input[type="email"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background: black;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .login-box a {
+      color: lightgray;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-box .register {
+      margin-top: 15px;
+      background: lightgray;
+      color: black;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mājiņas ikona augšpusē -->
+  <div class="top-bar">
+    <a href="home.html">
+      <img src="/Users/andazidele/Downloads/FinRez/Photos/home-icon.png" alt="Home">
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="login-box">
+      <h1>Esi sveicināts FinRez!</h1>
+      <p><strong>Pieslēgties ar e-pastu</strong></p>
+      <input type="email" placeholder="E-pasts*" required>
+      <input type="password" placeholder="Parole*" required>
+      <button onclick="window.location.href='index.html'">➡ Ienākt</button>
+      <p>Neizdodas pieslēgties? <a href="#">Atjaunot paroli</a></p>
+      <p>Tev vēl nav sava konta?</p>
+      <div class="register" onclick="window.location.href='pieregistresanas.html'">Reģistrējies</div>
+
+    </div>
+  </div>
+
+</body>
+</html>
